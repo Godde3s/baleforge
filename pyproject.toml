@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "baleforge"
+version = "1.0.0"
+description = "Modern async framework for Bale messenger bots — filters, FSM, middleware and an AI agent bridge."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Reza Bazdar (Godde3s)" }]
+requires-python = ">=3.10"
+keywords = ["bale", "bot", "framework", "asyncio", "telegram-compatible", "ai", "agent"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: AsyncIO",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Communications :: Chat",
+]
+dependencies = ["httpx>=0.25"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
